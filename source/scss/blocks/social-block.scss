@@ -7,6 +7,27 @@
       pointer-events: auto;
     }
   }
+
+  &--active {
+
+    & .social-block__link {
+      opacity: 1;
+      transform: translate(0, 0);
+      transition-property: opacity, transform;
+      transition-duration: $hoverSocialBtnDuration;
+      transition-timing-function: ease;
+
+      &--fb {
+        transition-delay: 100ms;
+      }
+      &--insta {
+        transition-delay: 150ms;
+      }
+      &--vk {
+        transition-delay: 200ms;
+      }
+    }
+  }
 }
 
 .social-block__toggler {
@@ -35,6 +56,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all $hoverSocialBtnDuration ease;
   }
 
   svg {
@@ -45,8 +67,9 @@
   }
 
   &:hover,
-  .social-block--active & {
+  .social-block--active {
     color: $c-purple;
+    transition: all $hoverSocialBtnDuration ease;
 
     &::before {
       width: 112.5%;
@@ -168,6 +191,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all $hoverSocialBtnDuration;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
