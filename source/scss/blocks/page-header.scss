@@ -241,6 +241,7 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition: color $hoverMenuItemDuration ease;
 
     &::after {
       content: "";
@@ -250,9 +251,7 @@
       width: 0;
       height: 2px;
       background-color: $c-light;
-      transition-property: width;
-      transition-duration: $hoverMenuItemDuration;
-      transition-timing-function: ease;
+      transition: width $hoverMenuItemDuration ease;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
