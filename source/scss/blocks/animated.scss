@@ -30,3 +30,22 @@
     transition: all $blockContentAppearance ease .6s;
   }
 }
+
+.page--loaded {
+  & .page-header__logo {
+    opacity: 1;
+    transform: translate(0);
+    transition: all $blockContentAppearance cubic-bezier(.12,.8,.3,.97);
+  }
+
+  & .page-header__menu {
+    opacity: 1;
+    transform: translate(0);
+    transition: all $blockContentAppearance ease;
+  }
+
+  & .screen__footer {
+    transform: translate(0);
+    transition: all $blockContentAppearance cubic-bezier(.12,.8,.3,.97);
+  }
+}
