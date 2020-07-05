@@ -6,14 +6,6 @@
   z-index: 1;
   overflow: hidden;
 
-  &.active {
-    & .intro__message {
-      opacity: 1;
-      transform: translate(0);
-      transition: all 1s ease;
-    }
-  }
-
   &--hidden {
     visibility: hidden;
   }

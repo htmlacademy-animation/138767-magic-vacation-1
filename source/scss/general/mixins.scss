@@ -58,3 +58,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin blockAppereanceBefore {
+  opacity: 0;
+  transform: translate(0, 20px);
+  transition: all $blockContentAppearance ease;
+}
+
+@mixin blockAppereanceAfter {
+  opacity: 1;
+  transform: translate(0);
+}
