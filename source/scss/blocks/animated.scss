@@ -1,0 +1,32 @@
+.screen {
+  &.active {
+    & .intro__message {
+      @include blockAppereanceAfter;
+    }
+
+    & .form__field {
+      width: calc(100% - 21rem);
+      transition: width $inputAppearance ease;
+
+      &::placeholder {
+        opacity: 1;
+        transition: opacity .3s ease $inputAppearance;
+      }
+    }
+  }
+}
+
+.swiper-slide-active {
+  & .slider__item-text {
+    opacity: 1;
+    transform: translate(0);
+    transition: all $blockContentAppearance ease .3s;
+  }
+}
+.swiper-slide-next {
+  & .slider__item-text {
+    opacity: 1;
+    transform: translate(0);
+    transition: all $blockContentAppearance ease .6s;
+  }
+}

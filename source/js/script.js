@@ -20,4 +20,6 @@ form();
 social();
 
 const fullPageScroll = new FullPageScroll();
-fullPageScroll.init();
+window.onload = () => {
+  fullPageScroll.init();
+}
