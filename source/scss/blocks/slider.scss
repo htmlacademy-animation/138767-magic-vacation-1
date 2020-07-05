@@ -98,7 +98,6 @@
   line-height: 2rem;
   opacity: 0;
   transform: translate(50px,0px);
-  transition: all $blockContentAppearance ease;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
