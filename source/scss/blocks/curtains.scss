@@ -1,0 +1,22 @@
+.curtains {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transition: height 1s ease;
+
+  &--open {
+    height: 100%;
+    transition: height 1s ease;
+  }
+}
+.screen--prizes.active {
+  & ~ .curtains--open {
+    background-color: $c-dark;
+    z-index: 2;
+  }
+}
+
+
